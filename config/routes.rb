@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
       resources :tickets, only: :create
+      get '/tags/send_higher_count', to: 'tags#send_higher_count'
     end
   end
 end
